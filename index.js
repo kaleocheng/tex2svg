@@ -11,7 +11,7 @@ mjAPI.start();
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-    port = 3000;
+    port = 8001;
 }
 const server = http.createServer().listen(port);
 
@@ -36,4 +36,4 @@ server.on('request', function (req, res) {
     });
 });
 
-console.log('Listening on port 3000');
+console.log(`Listening on port ${port}`);
